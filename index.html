@@ -29,9 +29,9 @@
         <div class="rain3"></div>
 
         <div class="playbtn">
-            <audio id="audio" src="audio/bgm.mp3" controls loop ></audio>
+            <audio id="audio" src="audio/bgm.mp3" controls loop></audio>
             <img id="playbtn" src="img/btn_play.png" alt="플레이">
-            <img id="playbtn" src="img/btn_pause.png" alt="일시중지">
+            <img id="playbtn2" src="img/btn_pause.png" alt="일시중지">
 
         </div>
         
@@ -97,10 +97,34 @@
                 </li>
               
             </ul>
-            
+          
             
 
     </div>
+  <script>
+  const audio = document.getElementById('audio')
+  const play = document.getElementById('playbtn')
+  const playbtn2 = document.getElementById('playbtn2')
 
+  // 플레이 버튼 클릭 시
+  playbtn.addEventListener('click', () => {
+    audio.play()
+    play.style.display = 'none'
+    playbtn2.style.display = 'inline'
+  })
+
+  // 일시중지 버튼 클릭 시
+  playbtn.addEventListener('click', () => {
+    audio.playbtn2()
+    play.style.display = 'none'
+    playbtn2.style.display = 'inline'
+  })
+
+  // 오디오가 끝났을 때 플레이 버튼 보여주기
+  audio.addEventListener('ended', () => {
+    play.style.display = 'none'
+    playbtn2.style.display = 'inline'
+  })
+</script>
 </body>
 </html>

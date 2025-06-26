@@ -132,9 +132,10 @@ header nav .gnb li a{color: #fff;padding: 25px; display: block;}
 #visual .text ul li p span.space {margin-right: 20px;}
 
 #visual .playbtn {position: absolute;left: 65%;top: 95%;transform: translate(-750px,-100%);}
-#visual .playbtn audio{height: 30px;}
-#visual .playbtn img{cursor: pointer;}
-#visual .playbtn img#pausebtn{display: none;}
+#visual .playbtn #audio{width: 100px;height: 30px;display: none;}
+#visual .playbtn img {cursor: pointer;}
+
+#visual .playbtn #playbtn2{display: none;}
 
 .rain {width: 100%; height: 100%;position:absolute;background:url(../img/rain.png);animation: rain 0.7s linear infinite;opacity: 80%;}
 @keyframes rain{
